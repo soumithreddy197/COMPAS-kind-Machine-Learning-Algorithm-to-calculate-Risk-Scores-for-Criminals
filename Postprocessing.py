@@ -72,17 +72,6 @@ def enforce_demographic_parity(categorical_results, epsilon):
     Bayes Classifier and SVM you should be able to find a non-trivial solution with epsilon=0.01
 """
 
-def prediction_list(li,threshold):
-    new_li=[]
-    for ele in li:
-        if(ele[0]>=threshold):
-            k=1
-        else:
-            k=0
-        tup=(k,ele[1])
-        new_li.append(tup)
-    return new_li
-
 def satisfy_tpr_condition(tpr,epsilon):
     for i in tpr.keys():
         for j in tpr.keys():
